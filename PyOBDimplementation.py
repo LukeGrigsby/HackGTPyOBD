@@ -78,6 +78,16 @@ def UpdateEMax(currentMax):
         if SEList[i].efficiency < currentMax.efficiency :
             currentMax = SEList[i]
     return currentMax
+def speedVector():
+    speedvector = []
+    for i in SEList:
+        speedvector.append(SEList[i].speed)
+    return speedvector
+def effVector():
+    effvector = []
+    for i in SEList:
+        effvector.append(SEList[i].efficiency)
+    return effvector
 #current list format
 #SPEED,EFFICIENCY //Format marker
 #CURRENT,MAX // max efficiency point
