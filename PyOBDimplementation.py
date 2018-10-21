@@ -36,7 +36,11 @@ def EfficiencyButtonRecord():
     connections.watch(obd.commands.SPEED, callback=new_spd)
     connectionfr.start()
     connections.start()
-    time.sleep(10)
+    t_end = time.time() + 10
+    while time.time() < t_end:
+        pass
+    connectionfr.stop()
+    connections.stop()
     speedAverage = (SpeedTotal/speedCounter)
     averageConsumption = (fuelRateTotal/fuelRateCounter)/speedAverage #liters per mile
     if ((maxSpeed - minSpeed) < 3) :
