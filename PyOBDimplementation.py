@@ -80,13 +80,17 @@ def UpdateEMax(currentMax):
     return currentMax
 def speedVector():
     speedvector = []
-    for i in SEList:
-        speedvector.append(SEList[i].speed)
+    i = 0
+    while i < len(SEList) :
+       speedvector.append(float(SEList[i].speed))
+       i += 1
     return speedvector
 def effVector():
     effvector = []
-    for i in SEList:
-        effvector.append(SEList[i].efficiency)
+    i = 0
+    while i < len(SEList) :
+        effvector.append(float(SEList[i].efficiency))
+        i += 1
     return effvector
 #current list format
 #SPEED,EFFICIENCY //Format marker
