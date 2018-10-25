@@ -72,10 +72,10 @@ def ExitSEList(num_new_):
             filewriter.writerow([SEList[num_loaded + x].speed, SEList[num_loaded + x].efficiency])
 #pass a SpeedandEfficiency object
 #have to manually update MaxSE this only returns the new max
-#good practice I guess
+#is this how python for loops work?
 def UpdateEMax(currentMax):
-    for i in SEList :
-        if SEList[i].efficiency < currentMax.efficiency :
+    for ele in SEList :
+        if ele.efficiency < currentMax.efficiency :
             currentMax = SEList[i]
     return currentMax
 def speedVector():
